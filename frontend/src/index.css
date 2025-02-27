@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-600 px-4 py-2.5 rounded-full text-[15px] font-medium tracking-wide transition-colors duration-200;
+  }
+  
+  .nav-link:not(.nav-link-active):hover {
+    @apply text-gray-800 bg-gray-100;
+  }
+  
+  .nav-link-active {
+    @apply text-white bg-[#202125] font-semibold hover:bg-[#202125];
+  }
+}
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
